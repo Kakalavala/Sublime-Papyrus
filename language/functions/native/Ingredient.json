@@ -1,0 +1,9 @@
+{
+    "extends": "None",
+    "functions": [
+        "IsHostile()",
+        "LearnEffect(Int aiIndex)",
+        "LearnNextEffect()",
+        "LearnAllEffects()"
+    ]
+}

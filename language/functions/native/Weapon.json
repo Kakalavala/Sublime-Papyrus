@@ -1,0 +1,6 @@
+{
+    "extends": "Form",
+    "functions": [
+        "Fire(ObjectReference akSource, Ammo akAmmo = None)"
+    ]
+}

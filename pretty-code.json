@@ -1,0 +1,17 @@
+{
+	"papyrus":
+	[
+		{ "(?i)\\b(scriptname)\\b": "ScriptName" },
+		{ "(?i)\\b(function|event|state|property|import|if|else|auto|self)\\b": "capitalize({match})" },
+		{ "(?i)\\b(as|extends)\\b": "lower({match})" },
+		{ "(?i)((?<=\\bend)|(?<=\\belse))(.*)\\b": "capitalize({match})" },
+		{ "(?i)(\\b(end)(if|function|state|property|event)\\b)|(\\b(else)(if)?\\b)": "capitalize({match})" },
+		{ "(?i)\\b(true|false|none|bool|int|float|string)\\b": "capitalize({match})" },
+		{ "(?i)(?<=\\b0x)([a-f0-9]{8})\\b": "upper({match})"},
+		{ "(?i)(\\b(\\=|\\s+\\=\\s{2,}|\\s{2,}\\=\\s+)\\b)": " = "},
+		{ "(?i)(\\(\\s+)\\b": "(" },
+		{ "(?i)\\b(\\s+\\))": ")" },
+		{ "(?i)\\(\\s+\\)": "()" },
+		{ "(?i) {2,}": " " }
+	]
+}

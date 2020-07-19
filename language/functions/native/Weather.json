@@ -1,0 +1,14 @@
+{
+    "extends": "Form",
+    "functions": [
+        "ReleaseOverride()",
+        "ForceActive(Bool abOverride = False)",
+        "SetActive(Bool abOverride = False, Bool abAccelerate = False)",
+        "FindWeather(Int auiType)",
+        "GetClassification()",
+        "GetCurrentWeather()",
+        "GetOutgoingWeather()",
+        "GetCurrentWeatherTransition()",
+        "GetSkyMode()"
+    ]
+}

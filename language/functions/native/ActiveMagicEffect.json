@@ -1,0 +1,30 @@
+{
+    "extends": "None",
+    "functions": [
+        "AddInventoryEventFilter(Form akFilter)",
+        "Dispel()",
+        "GetBaseObject()",
+        "GetCasterActor()",
+        "GetTargetActor()",
+        "RegisterForAnimationEvent(ObjectReference akSender, String asEventName)",
+        "RegisterForLOS(Actor akViewer, ObjectReference akTarget)",
+        "RegisterForSingleLOSGain(Actor akViewer, ObjectReference akTarget)",
+        "RegisterForSingleLOSLost(Actor akViewer, ObjectReference akTarget)",
+        "RegisterForSingleUpdate(Float afInterval)",
+        "RegisterForSleep()",
+        "RegisterForTrackedStatsEvent()",
+        "RegisterForUpdate(Float afInterval)",
+        "RegisterForUpdateGameTime(Float afInterval)",
+        "RegisterForSingleUpdateGameTime(Float afInterval)",
+        "RemoveAllInventoryEventFilters()",
+        "RemoveInventoryEventFilter(Form akFilter)",
+        "StartObjectProfiling()",
+        "StopObjectProfiling()",
+        "UnregisterForLOS(Actor akViewer, ObjectReference akTarget)",
+        "UnregisterForAnimationEvent(ObjectReference akSender, String asEventName)",
+        "UnregisterForSleep()",
+        "UnregisterForTrackedStatsEvent()",
+        "UnregisterForUpdate()",
+        "UnregisterForUpdateGameTime()"
+    ]
+}

@@ -1,0 +1,17 @@
+[
+	{ "caption": "-", "id": "pretty_code" },
+    { "command": "pretty_code_papyrus", "caption": "Pretty Print – Papyrus" },
+    { "caption": "-", "id": "papyrus_area" },
+    {
+    	"caption": "Papyrus",
+    	"children":
+    	[
+    		{ "command": "papyrus_new", "caption": "New script…" },
+    		{ "command": "papyrus_open", "caption": "Open script…" },
+            { "command": "papyrus_clone", "caption": "Clone script…"},
+            { "caption": "-" },
+    		{ "command": "papyrus_save", "caption": "Save script…" },
+            { "command": "papyrus_save_as", "caption": "Save script as…" }
+    	]
+    }
+]

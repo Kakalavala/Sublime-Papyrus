@@ -1,0 +1,7 @@
+{
+    "extends": "Form",
+    "functions": [
+        "Add()",
+        "Remove()"
+    ]
+}

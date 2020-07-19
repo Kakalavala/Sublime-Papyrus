@@ -1,0 +1,29 @@
+{
+    "extends": "Form",
+    "functions": [
+        "CanPayCrimeGold()",
+        "GetCrimeGold()",
+        "GetCrimeGoldNonViolent()",
+        "GetCrimeGoldViolent()",
+        "GetInfamy()",
+        "GetInfamyNonViolent()",
+        "GetInfamyViolent()",
+        "GetReaction(Faction akOther)",
+        "GetStolenItemValueCrime()",
+        "GetStolenItemValueNoCrime()",
+        "IsFactionInCrimeGroup(Faction akOther)",
+        "IsPlayerExpelled()",
+        "ModCrimeGold(Int aiAmount, Bool abViolent = False)",
+        "ModReaction(Faction akOther, Int aiAmount)",
+        "PlayerPayCrimeGold(Bool abRemoveStolenItems = True, Bool abGoToJail = True)",
+        "SendAssaultAlarm()",
+        "SendPlayerToJail(Bool abRemoveInventory = True, Bool abRealJail = True)",
+        "SetAlly(Faction akOther, Bool abSelfIsFriendToOther = False, Bool abOtherIsFriendToSelf = False)",
+        "SetCrimeGold(Int aiGold)",
+        "SetCrimeGoldViolent(Int aiGold)",
+        "SetEnemy(Faction akOther, Bool abSelfIsNeutralToOther = False, Bool abOtherIsNeutralToSelf = False)",
+        "SetPlayerEnemy(Bool abIsEnemy = True)",
+        "SetPlayerExpelled(Bool abIsExpelled = True)",
+        "SetReaction(Faction akOther, Int aiNewValue)"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "extends": "Form",
+    "functions": [
+        "Cast(ObjectReference akSource, ObjectReference akTarget = None)",
+        "RemoteCast(ObjectReference akSource, Actor akBlameActor, ObjectReference akTarget = None)",
+        "IsHostile()",
+        "Preload()",
+        "Unload()"
+    ]
+}

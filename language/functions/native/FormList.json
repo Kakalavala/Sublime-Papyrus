@@ -1,0 +1,12 @@
+{
+    "extends": "None",
+    "functions": [
+        "AddForm(Form apForm)",
+        "Find(Form apForm)",
+        "GetSize()",
+        "GetAt(Int aiIndex)",
+        "HasForm(Form akForm)",
+        "RemoveAddedForm(Form apForm)",
+        "Revert()"
+    ]
+}

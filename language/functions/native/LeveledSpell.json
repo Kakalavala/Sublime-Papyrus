@@ -1,0 +1,7 @@
+{
+    "extends": "Form",
+    "functions": [
+        "AddForm(Form apForm, Int aiLevel)",
+        "Revert()"
+    ]
+}

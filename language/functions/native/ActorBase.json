@@ -1,0 +1,18 @@
+{
+    "extends": "Form",
+    "functions": [
+        "GetClass()",
+        "GetDeadCount()",
+        "GetGiftFilter()",
+        "GetRace()",
+        "GetSex()",
+        "IsEssential()",
+        "IsInvulnerable()",
+        "IsProtected()",
+        "IsUnique()",
+        "SetEssential(Bool abEssential = True)",
+        "SetInvulnerable(Bool abInvulnerable = True)",
+        "SetProtected(Bool abProtected = True)",
+        "SetOutfit(Outfit akOutfit, Bool abSleepOutfit = False)"
+    ]
+}

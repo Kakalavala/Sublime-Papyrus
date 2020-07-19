@@ -1,0 +1,27 @@
+{
+    "extends": "None",
+    "functions": [
+        "GetFormID()",
+        "GetGoldValue()",
+        "HasKeyword(Keyword akKeyword)",
+        "PlayerKnows()",
+        "RegisterForAnimationEvent(ObjectReference akSender, String asEventName)",
+        "RegisterForLOS(Actor akViewer, ObjectReference akTarget)",
+        "RegisterForSingleLOSGain(Actor akViewer, ObjectReference akTarget)",
+        "RegisterForSingleLOSLost(Actor akViewer, ObjectReference akTarget)",
+        "RegisterForSingleUpdate(Float afInterval)",
+        "RegisterForSleep()",
+        "RegisterForTrackedStatsEvent()",
+        "RegisterForUpdate(Float afInterval)",
+        "RegisterForUpdateGameTime(Float afInterval)",
+        "RegisterForSingleUpdateGameTime(Float afInterval)",
+        "StartObjectProfiling()",
+        "StopObjectProfiling()",
+        "UnregisterForAnimationEvent(ObjectReference akSender, String asEventName)",
+        "UnregisterForLOS(Actor akViewer, ObjectReference akTarget)",
+        "UnregisterForSleep()",
+        "UnregisterForTrackedStatsEvent()",
+        "UnregisterForUpdate()",
+        "UnregisterForUpdateGameTime()"
+    ]
+}

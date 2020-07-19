@@ -1,0 +1,15 @@
+{
+    "extends": "Form",
+    "functions": [
+        "GetActorOwner()",
+        "GetFactionOwner()",
+        "IsAttached()",
+        "IsInterior()",
+        "Reset()",
+        "SetActorOwner(ActorBase akActor)",
+        "SetFactionOwner(Faction akFaction)",
+        "SetFogPlanes(Float afNear, Float afFar)",
+        "SetFogPower(Float afPower)",
+        "SetPublic(Bool abPublic = True)"
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "extends": "Form",
+    "functions": [
+        "ModObjectiveGlobal(Float afModValue, GlobalVariable aModGlobal, Int aiObjectiveID = -1, Float afTargetValue = -1.0, Bool abCountingUp = True, Bool abCompleteObjective = True, Bool abRedisplayObjective = True)",
+        "CompleteAllObjectives()",
+        "CompleteQuest()",
+        "FailAllObjectives()",
+        "GetAlias(Int aiAliasID)",
+        "GetCurrentStageID()",
+        "GetStage()",
+        "GetStageDone(Int aiStage)",
+        "IsActive()",
+        "IsCompleted()",
+        "IsObjectiveCompleted(Int aiObjective)",
+        "IsObjectiveDisplayed(Int aiObjective)",
+        "IsObjectiveFailed(Int aiObjective)",
+        "IsRunning()",
+        "IsStageDone(Int aiStage)",
+        "IsStarting()",
+        "IsStopping()",
+        "IsStopped()",
+        "Reset()",
+        "SetActive(Bool abActive = True)",
+        "SetCurrentStageID(Int aiStageID)",
+        "SetObjectiveCompleted(Int aiObjective, Bool abCompleted = True)",
+        "SetObjectiveDisplayed(Int aiObjective, Bool abDisplayed = True, Bool abForce = False)",
+        "SetObjectiveFailed(Int aiObjective, Bool abFailed = True)",
+        "SetStage(Int aiStage)",
+        "Start()",
+        "Stop()",
+        "UpdateCurrentInstanceGlobal(GlobalVariable aUpdateGlobal)"
+    ]
+}

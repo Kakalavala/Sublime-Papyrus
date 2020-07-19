@@ -1,0 +1,7 @@
+{
+    "extends": "Form",
+    "functions": [
+        "Play(ObjectReference akObject, Float afTime = -1.0, ObjectReference akFacingObject = None)",
+        "Stop(ObjectReference akObject)"
+    ]
+}

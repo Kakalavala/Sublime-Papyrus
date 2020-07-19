@@ -1,0 +1,8 @@
+{
+    "extends": "Alias",
+    "functions": [
+        "Clear()",
+        "GetLocation()",
+        "ForceLocationTo(Location akNewLocation)"
+    ]
+}

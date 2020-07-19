@@ -1,0 +1,35 @@
+[
+    {
+        "id": "tools",
+        "children":
+        [
+            { "command": "pretty_code_papyrus", "caption": "Pretty Print…" }
+        ]
+    },
+    {
+    	"id": "preferences",
+        "children":
+        [
+        	{ "caption": "-" },
+            {
+                "caption": "Papyrus",
+                "children":
+                [
+                    {
+		            	"command": "open_file", "args": { "file": "${packages}/User/Monokai.tmTheme" },
+		            	"caption": "Customize Theme…"
+		            },
+		            {
+		            	"command": "open_file", "args": { "file": "${packages}/Papyrus/Miscellaneous.tmPreferences" },
+		            	"caption": "Customize Indention Rules…"
+		            },
+		            { "caption": "-" },
+		            {
+		            	"command": "open_file", "args": { "file": "${packages}/Papyrus/Papyrus.sublime-settings" },
+		            	"caption": "Settings…"
+		            }
+                ]
+            }
+        ]
+    }
+]

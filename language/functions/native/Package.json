@@ -1,0 +1,7 @@
+{
+    "extends": "Form",
+    "functions": [
+        "GetOwningQuest()",
+        "GetTemplate()"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "extends": "None",
+    "functions": [
+        "abs(Float afValue)",
+        "acos(Float afValue)",
+        "asin(Float afValue)",
+        "atan(Float afValue)",
+        "Ceiling(Float afValue)",
+        "cos(Float afValue)",
+        "DegreesToRadians(Float afDegrees)",
+        "Floor(Float afValue)",
+        "pow(Float x, Float y)",
+        "RadiansToDegrees(Float afRadians)",
+        "sin(Float afValue)",
+        "sqrt(Float afValue)",
+        "tan(Float afValue)"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "extends": "Form",
+    "functions": [
+        "Apply(Float afStrength = 1.0)",
+        "ApplyCrossFade(Float afFadeDuration = 1.0)",
+        "PopTo(ImageSpaceModifier akNewModifier, Float afStrength = 1.0)",
+        "Remove()",
+        "RemoveCrossFade(Float afFadeDuration = 1.0)"
+    ]
+}

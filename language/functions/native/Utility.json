@@ -1,0 +1,29 @@
+{
+    "extends": "None",
+    "functions": [
+        "GameTimeToString(Float afGameTime)",
+        "GetCurrentGameTime()",
+        "GetCurrentRealTime()",
+        "IsInMenuMode()",
+        "RandomInt(Int aiMin = 0, Int aiMax = 100)",
+        "RandomFloat(Float afMin = 0.0, Float afMax = 1.0)",
+        "SetINIFloat(String ini, Float value)",
+        "SetINIInt(String ini, Int value)",
+        "SetINIBool(String ini, Bool value)",
+        "SetINIString(String ini, String value)",
+        "Wait(Float afSeconds)",
+        "WaitGameTime(Float afHours)",
+        "WaitMenuMode(Float afSeconds)",
+        "CaptureFrameRate(Int numFrames)",
+        "StartFrameRateCapture()",
+        "EndFrameratecapture()",
+        "GetAverageFrameRate()",
+        "GetMinFrameRate()",
+        "GetMaxFrameRate()",
+        "GetCurrentMemory()",
+        "GetBudgetCount()",
+        "GetCurrentBudget(Int aiBudgetNumber)",
+        "OverBudget(Int aiBudgetNumber)",
+        "GetBudgetName(Int aiBudgetNumber)"
+    ]
+}

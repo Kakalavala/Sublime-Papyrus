@@ -1,0 +1,6 @@
+{
+    "extends": "Form",
+    "functions": [
+        "Cast(ObjectReference akSource, ObjectReference akTarget = None)"
+    ]
+}

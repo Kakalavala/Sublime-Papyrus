@@ -1,0 +1,11 @@
+{
+    "extends": "Form",
+    "functions": [
+        "ForceStart()",
+        "Start()",
+        "Stop()",
+        "IsPlaying()",
+        "GetOwningQuest()",
+        "IsActionComplete(Int aiActionID)"
+    ]
+}

@@ -1,0 +1,26 @@
+{
+	// If you use a custom installation path, specify it here.
+	"skyrim_directory": "C:\\SteamLibrary\\steamapps\\common\\Skyrim Special Edition",
+
+	// If true indentations will be done with spaces; otherwise
+	// indentations will be done with tabs
+	"pretty_code_indent_with_spaces": false,
+	"pretty_code_indent_width": 4,
+
+	// Anything under this comment is better off unchanged!
+	// Unless you know what you are doing!
+
+	"color_scheme": "Packages/Papyrus/Papyrus.sublime-color-scheme",
+	"font_size": 14,
+	"theme": "Default.sublime-theme",
+	"auto_complete_cycle": true,
+	"word_wrap": false,
+
+	"pretty_code_regex": "pretty-code.json",
+
+	"script_extenders":
+	[
+		{ "native": "\\language\\native.json" },
+		{ "skse": "\\language\\skse.json" }
+	]
+}

@@ -1,0 +1,27 @@
+{
+    "extends": "Alias",
+    "functions": [
+        "AddInventoryEventFilter(Form akFilter)",
+        "Clear()",
+        "GetReference()",
+        "ForceRefTo(ObjectReference akNewRef)",
+        "RemoveAllInventoryEventFilters()",
+        "RemoveInventoryEventFilter(Form akFilter)",
+        "ForceRefIfEmpty(ObjectReference akNewRef)",
+        "GetActorReference()",
+        "GetRef()",
+        "GetActorRef()",
+        "TryToAddToFaction(Faction FactionToAddTo)",
+        "TryToRemoveFromFaction(Faction FactionToRemoveFrom)",
+        "TryToStopCombat()",
+        "TryToDisable()",
+        "TryToDisableNoWait()",
+        "TryToEnable()",
+        "TryToEnableNoWait()",
+        "TryToEvaluatePackage()",
+        "TryToKill()",
+        "TryToMoveTo(ObjectReference RefToMoveTo)",
+        "TryToReset()",
+        "TryToClear()"
+    ]
+}

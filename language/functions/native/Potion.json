@@ -1,0 +1,6 @@
+{
+    "extends": "None",
+    "functions": [
+        "IsHostile()"
+    ]
+}

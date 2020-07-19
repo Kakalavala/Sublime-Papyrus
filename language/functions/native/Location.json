@@ -1,0 +1,16 @@
+{
+    "extends": "Form",
+    "functions": [
+        "GetKeywordData(Keyword akKeyword)",
+        "GetRefTypeAliveCount(LocationRefType akRefType)",
+        "GetRefTypeDeadCount(LocationRefType akRefType)",
+        "HasCommonParent(Location akOther, Keyword akFilter = None)",
+        "HasRefType(LocationRefType akRefType)",
+        "IsCleared()",
+        "IsChild(Location akOther)",
+        "IsLoaded()",
+        "IsSameLocation(Location akOtherLocation, Keyword akKeyword = None)",
+        "SetKeywordData(Keyword akKeyword, Float afData)",
+        "SetCleared(Bool abCleared = True)"
+    ]
+}

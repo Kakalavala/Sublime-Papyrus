@@ -1,0 +1,9 @@
+{
+    "extends": "Form",
+    "functions": [
+        "Play(ObjectReference akSource)",
+        "PlayAndWait(ObjectReference akSource)",
+        "StopInstance(Int aiPlaybackInstance)",
+        "SetInstanceVolume(Int aiPlaybackInstance, Float afVolume)"
+    ]
+}

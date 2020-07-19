@@ -1,0 +1,12 @@
+{
+    "extends": "Form",
+    "functions": [
+        "GetValue()",
+        "SetValue(Float afNewValue)",
+        "GetValueInt()",
+        "SetValueInt(Int aiNewValue)",
+        "get()",
+        "set(Float afValue)",
+        "Mod(Float afHowMuch)"
+    ]
+}

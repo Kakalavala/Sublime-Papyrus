@@ -1,0 +1,6 @@
+{
+    "extends": "Form",
+    "functions": [
+        "GetAssociatedSkill()"
+    ]
+}

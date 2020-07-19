@@ -1,0 +1,24 @@
+{
+    "extends": "None",
+    "functions": [
+        "GetOwningQuest()",
+        "RegisterForAnimationEvent(ObjectReference akSender, String asEventName)",
+        "RegisterForLOS(Actor akViewer, ObjectReference akTarget)",
+        "RegisterForSingleLOSGain(Actor akViewer, ObjectReference akTarget)",
+        "RegisterForSingleLOSLost(Actor akViewer, ObjectReference akTarget)",
+        "RegisterForSingleUpdate(Float afInterval)",
+        "RegisterForUpdate(Float afInterval)",
+        "RegisterForUpdateGameTime(Float afInterval)",
+        "RegisterForSingleUpdateGameTime(Float afInterval)",
+        "RegisterForSleep()",
+        "RegisterForTrackedStatsEvent()",
+        "StartObjectProfiling()",
+        "StopObjectProfiling()",
+        "UnregisterForLOS(Actor akViewer, ObjectReference akTarget)",
+        "UnregisterForAnimationEvent(ObjectReference akSender, String asEventName)",
+        "UnregisterForSleep()",
+        "UnregisterForTrackedStatsEvent()",
+        "UnregisterForUpdate()",
+        "UnregisterForUpdateGameTime()"
+    ]
+}

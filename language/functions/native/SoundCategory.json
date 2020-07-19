@@ -1,0 +1,11 @@
+{
+    "extends": "Form",
+    "functions": [
+        "Pause()",
+        "UnPause()",
+        "Mute()",
+        "UnMute()",
+        "SetVolume(Float afVolume)",
+        "SetFrequency(Float afFrequencyCoeffecient)"
+    ]
+}

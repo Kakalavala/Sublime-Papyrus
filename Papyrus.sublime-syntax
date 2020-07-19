@@ -1,0 +1,182 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Papyrus
+file_extensions:
+  - psc
+first_line_match: (?i)^scriptname
+scope: source.papyrus
+variables:
+  identifier_escape: (?:\\u(?:\h{4}|\{\h+\}))
+  identifier_start: (?:[_$\p{L}\p{Nl}]|{{identifier_escape}})
+  identifier_part: (?:[_$\p{L}\p{Nl}\p{Mn}\p{Mc}\p{Nd}\p{Pc}\x{200C}\x{200D}]|{{identifier_escape}})
+  identifier_break: (?!{{identifier_part}})
+  identifier: (?:{{identifier_start}}{{identifier_part}}*{{identifier_break}})
+
+  reserved_functions_papyrus: (?i)\b(abs|acos|activate|add|addachievement|adddependentanimatedobjectreference|addform|addhavokballandsocketconstraint|addinventoryeventfilter|additem|addkeyifneeded|addperk|addshout|addspell|addtofaction|addtomap|advanceskill|allowbleedoutdialogue|allowpcdialogue|apply|applycrossfade|applyhavokimpulse|asin|atan|attachashpile|blockactivation|calculateencounterlevel|calculatefavorcost|canfasttraveltomarker|canpaycrimegold|captureframerate|cast|ceiling|centeroncell|centeroncellandwait|clear|cleararrested|cleardestruction|clearextraarrows|clearforcedlandingmarker|clearforcedmovement|clearkeepoffsetfromactor|clearlookat|clearprison|cleartempeffects|closeuserlog|completeallobjectives|completequest|cos|countlinkedrefchain|createdetectionevent|damageactorvalue|damageav|damageobject|dbsendplayerposition|debugchannelnotify|degreestoradians|delete|deletewhenable|disable|disablelinkchain|disablenowait|disableplayercontrols|dispel|dispelallspells|dispelspell|docombatspellapply|dropobject|dumpaliasdata|enable|enableai|enablefasttravel|enablelinkchain|enablenowait|enableplayercontrols|endframeratecapture|equipitem|equipshout|equipspell|evaluatepackage|fadeoutgame|failallobjectives|fasttravel|findclosestactor|findclosestactorfromref|findclosestreferenceofanytypeinlist|findclosestreferenceofanytypeinlistfromref|findclosestreferenceoftype|findclosestreferenceoftypefromref|findrandomactor|findrandomactorfromref|findrandomreferenceofanytypeinlist|findrandomreferenceofanytypeinlistfromref|findrandomreferenceoftype|findrandomreferenceoftypefromref|findweather|fire|floor|forceactive|forceactorvalue|forceaddragdolltoworld|forceav|forcefirstperson|forcelocationto|forcemovementdirection|forcemovementdirectionramp|forcemovementrotationspeed|forcemovementrotationspeedramp|forcemovementspeed|forcemovementspeedramp|forcerefifempty|forcerefto|forceremoveragdollfromworld|forcestart|forcetargetangle|forcetargetdirection|forcetargetspeed|forcethirdperson|gametimetostring|getactorbase|getactorowner|getactorref|getactorreference|getactorvalue|getactorvaluepercentage|getalias|getanglex|getangley|getanglez|getanimationvariablebool|getanimationvariablefloat|getanimationvariableint|getassociatedskill|getat|getav|getaverageframerate|getavpercentage|getbaseactorvalue|getbaseav|getbaseobject|getbribeamount|getbudgetcount|getbudgetname|getcasteractor|getclass|getclassification|getcombatstate|getcombattarget|getconfigname|getcrimefaction|getcrimegold|getcrimegoldnonviolent|getcrimegoldviolent|getcurrentbudget|getcurrentdestructionstage|getcurrentgametime|getcurrentlocation|getcurrentmemory|getcurrentpackage|getcurrentrealtime|getcurrentscene|getcurrentstageid|getcurrentweather|getcurrentweathertransition|getdeadcount|getdialoguetarget|getdistance|geteditorlocation|getequippeditemtype|getequippedshield|getequippedshout|getequippedspell|getequippedweapon|getfactionowner|getfactionrank|getfactionreaction|getflyingstate|getforcedlandingmarker|getform|getformfromfile|getformid|getgamesettingfloat|getgamesettingint|getgamesettingstring|getgiftfilter|getgoldamount|getgoldvalue|getheadingangle|getheight|gethighestrelationshiprank|getinfamy|getinfamynonviolent|getinfamyviolent|getitemcount|getitemhealthpercent|getkey|getkeyworddata|getkiller|getlength|getlevel|getleveledactorbase|getlightlevel|getlinkedref|getlocation|getlocklevel|getlowestrelationshiprank|getmass|getmaxframerate|getminframerate|getnobleedoutrecovery|getnthlinkedref|getopenstate|getoutgoingweather|getowningquest|getparentcell|getplatformname|getplayer|getplayercontrols|getplayergrabbedref|getplayerslastriddenhorse|getpositionx|getpositiony|getpositionz|getrace|getreaction|getrealhourspassed|getref|getreference|getreftypealivecount|getreftypedeadcount|getregard|getrelationshiprank|getreputation|getscale|getselfasactor|getsex|getsitstate|getsize|getskymode|getsleepstate|getstage|getstagedone|getstate|getstolenitemvaluecrime|getstolenitemvaluenocrime|gettargetactor|gettempfavorpoints|gettemplate|gettriggerobjectcount|getvalue|getvalueint|getversionnumber|getvoicerecoverytime|getvoicetype|getwidth|getworldspace|gotostate|hasassociation|hascommonparent|haseffectkeyword|hasfamilyrelationship|hasform|haskeyword|haslos|hasmagiceffect|hasmagiceffectwithkeyword|hasnode|hasparentrelationship|hasperk|hasreftype|hasspell|hidetitlesequencemenu|ignorefriendlyhits|incrementskill|incrementskillby|incrementstat|interruptcast|is3dloaded|isactioncomplete|isactivatechild|isactivatecontrolsenabled|isactivationblocked|isactive|isalarmed|isalerted|isallowedtofly|isarrested|isarrestingtarget|isattached|isbleedingout|isbribed|iscamswitchcontrolsenabled|ischild|iscleared|iscommandedactor|iscompleted|isdead|isdetectedby|isdisabled|isdoingfavor|isenabled|isequipped|isessential|isfactionincrimegroup|isfasttravelenabled|isfightingcontrolsenabled|isflying|isfurnitureinuse|isfurnituremarkerinuse|isghost|isguard|ishostile|ishostiletoactor|isignoringfriendlyhits|isincombat|isindialoguewithplayer|isinfaction|isininterior|isinkillmove|isinlocation|isinmenumode|isinterior|isintimidated|isinvulnerable|isjournalcontrolsenabled|isloaded|islockbroken|islocked|islookingcontrolsenabled|ismapmarkervisible|ismenucontrolsenabled|ismovementcontrolsenabled|isnearplayer|isobjectivecompleted|isobjectivedisplayed|isobjectivefailed|isplayerexpelled|isplayerslastriddenhorse|isplayerteammate|isplaying|isprotected|isrunning|issamelocation|issneaking|issneakingcontrolsenabled|issprinting|isstagedone|isstarting|isstopped|isstopping|istrespassing|isunconscious|isunique|isweapondrawn|iswordunlocked|keepoffsetfromactor|kill|killessential|killsilent|knockareaeffect|learnalleffects|learneffect|learnnexteffect|length|lock|makeplayerfriend|messagebox|mod|modactorvalue|modav|modcrimegold|modfactionrank|modfavorpoints|modfavorpointswithglobal|modobjectiveglobal|modreaction|modregard|moveto|movetoifunloaded|movetointeractionlocation|movetomyeditorlocation|movetonode|movetopackagelocation|movetowhenunloaded|mute|notification|onactivate|onanimationevent|onanimationeventunregistered|onattachedtocell|onbeginstate|oncellattach|oncelldetach|oncellload|onclose|oncombatstatechanged|oncontainerchanged|ondeath|ondestructionstagechanged|ondetachedfromcell|oneffectfinish|oneffectstart|onendstate|onenterbleedout|onequipped|ongainlos|ongetup|ongrab|onhit|oninit|onitemadded|onitemremoved|onload|onlocationchange|onlockstatechanged|onlostlos|onmagiceffectapply|onobjectequipped|onobjectunequipped|onopen|onpackagechange|onpackageend|onpackagestart|onplayerbowshot|onplayerloadgame|onraceswitchcomplete|onread|onrelease|onreset|onsell|onsit|onsleepstart|onsleepstop|onspellcast|onstoryactivateactor|onstoryaddtoplayer|onstoryarrest|onstoryassaultactor|onstorybribenpc|onstorycastmagic|onstorychangelocation|onstorycraftitem|onstorycrimegold|onstorycure|onstorydialogue|onstorydiscoverdeadbody|onstoryescapejail|onstoryflatternpc|onstoryhello|onstoryincreaselevel|onstoryincreaseskill|onstoryinfection|onstoryintimidatenpc|onstoryjail|onstorykillactor|onstorynewvoicepower|onstorypayfine|onstorypicklock|onstoryplayergetsfavor|onstoryrelationshipchange|onstoryremovefromplayer|onstoryscript|onstoryservedtime|onstorytrespass|ontrackedstatsevent|ontranslationalmostcomplete|ontranslationcomplete|ontranslationfailed|ontraphit|ontraphitstart|ontraphitstop|ontrigger|ontriggerenter|ontriggerleave|onunequipped|onunload|onupdate|onupdategametime|onwardhit|openinventory|openuserlog|overbudget|pathtoreference|pause|placeactoratme|placeatme|play|playaction|playactionandwait|playandwait|playanimation|playanimationandwait|playbink|playerknows|playermovetoandwait|playerpaycrimegold|playgamebryoanimation|playidle|playidlewithtarget|playimpacteffect|playsubgraphanimation|playsyncedanimationandwaitss|playsyncedanimationss|playterraineffect|popto|pow|precachechargen|precachechargenclear|preload|processtraphit|pushactoraway|querystat|quitgame|quittomainmenu|radianstodegrees|ramprumble|randomfloat|randomint|registerforanimationevent|registerforlos|registerforsinglelosgain|registerforsingleloslost|registerforsingleupdate|registerforsingleupdategametime|registerforsleep|registerfortrackedstatsevent|registerforupdate|registerforupdategametime|releaseoverride|remotecast|remove|removeaddedform|removeallinventoryeventfilters|removeallitems|removecrossfade|removedependentanimatedobjectreference|removefromallfactions|removefromfaction|removehavokconstraints|removeinventoryeventfilter|removeitem|removeperk|removeshout|removespell|requestautosave|requestmodel|requestsave|reset|resethealthandlimbs|resethelpmessage|restoreactorvalue|restoreav|resurrect|revert|say|sendanimationevent|sendassaultalarm|sendplayertojail|sendstealalarm|sendstoryevent|sendstoryeventandwait|sendtrespassalarm|sendwerewolftransformation|servetime|setactive|setactorcause|setactorowner|setactorvalue|setalert|setallowflying|setally|setalpha|setangle|setanimationvariablebool|setanimationvariablefloat|setanimationvariableint|setattackactoronsight|setav|setbeastform|setbribed|setcameratarget|setcleared|setcrimefaction|setcrimegold|setcrimegoldviolent|setcriticalstage|setcurrentstageid|setdestroyed|setdoingfavor|setdontmove|setenemy|setessential|setfactionowner|setfactionrank|setfogcolor|setfogplanes|setfogpower|setfootik|setforcedlandingmarker|setfrequency|setghost|setgodmode|setheadtracking|sethudcartmode|setinchargen|setinibool|setinifloat|setiniint|setinistring|setinstancevolume|setintimidated|setinvulnerable|setkeyworddata|setlocklevel|setlookat|setmotiontype|setnobleedoutrecovery|setnofavorallowed|setnotshowonstealthmeter|setobjectivecompleted|setobjectivedisplayed|setobjectivefailed|setopen|setoutfit|setplayeraidriven|setplayercontrols|setplayerenemy|setplayerexpelled|setplayerreportcrime|setplayerresistingarrest|setplayerteammate|setposition|setprotected|setpublic|setrace|setreaction|setrelationshiprank|setrestrained|setscale|setsittingrotation|setstage|settempfavorpoints|setunconscious|setvalue|setvalueint|setvehicle|setvoicerecoverytime|setvolume|shakecamera|shakecontroller|show|showashelpmessage|showbartermenu|showfirstpersongeometry|showgiftmenu|showracemenu|showrefposition|showtitlesequencemenu|showtrainingmenu|sin|splinetranslateto|splinetranslatetoref|splinetranslatetorefnode|sqrt|start|startcannibal|startcombat|startframeratecapture|startobjectprofiling|startscriptprofiling|startstackprofiling|starttitlesequence|startvampirefeed|stop|stopcombat|stopcombatalarm|stopinstance|stopobjectprofiling|stopscriptprofiling|stopstackprofiling|stoptranslation|takeallshots|takescreenshot|takeshot|tan|teachword|tethertohorse|toggleai|togglecollisions|togglemenus|trace|traceandbox|traceconditional|tracestack|traceuser|translateto|translatetoref|trapsoul|triggerscreenblood|trytoaddtofaction|trytoclear|trytodisable|trytodisablenowait|trytoenable|trytoenablenowait|trytoevaluatepackage|trytokill|trytomoveto|trytoremovefromfaction|trytoreset|trytostopcombat|unequipall|unequipitem|unequipitemslot|unequipshout|unequipspell|unload|unlockowneddoorsincell|unlockword|unmute|unpause|unregisterforanimationevent|unregisterforlos|unregisterforsleep|unregisterfortrackedstatsevent|unregisterforupdate|unregisterforupdategametime|updatecurrentinstanceglobal|usinggamepad|wait|waitforanimationevent|waitgametime|waitmenumode|willintimidatesucceed|wornhaskeyword){{identifier_break}}
+  reserved_functions_papyrus_skse: (?i)\b(addpackageoverride|removepackageoverride|countpackageoverride|clearpackageoverride|removeallpackageoverride|setintvalue|setfloatvalue|setstringvalue|setformvalue|unsetintvalue|unsetfloatvalue|unsetstringvalue|unsetformvalue|hasintvalue|hasfloatvalue|hasstringvalue|hasformvalue|getintvalue|getfloatvalue|getstringvalue|getformvalue|pluckintvalue|pluckfloatvalue|pluckstringvalue|pluckformvalue|adjustintvalue|adjustfloatvalue|intlistadd|floatlistadd|stringlistadd|formlistadd|intlistget|floatlistget|stringlistget|formlistget|intlistset|floatlistset|stringlistset|formlistset|intlistpluck|floatlistpluck|stringlistpluck|formlistpluck|intlistshift|floatlistshift|stringlistshift|formlistshift|intlistpop|floatlistpop|stringlistpop|formlistpop|intlistadjust|floatlistadjust|intlistinsert|floatlistinsert|stringlistinsert|formlistinsert|intlistremove|floatlistremove|stringlistremove|formlistremove|intlistclear|floatlistclear|stringlistclear|formlistclear|intlistremoveat|floatlistremoveat|stringlistremoveat|formlistremoveat|intlistcount|floatlistcount|stringlistcount|formlistcount|intlistcountvalue|floatlistcountvalue|stringlistcountvalue|formlistcountvalue|intlistfind|floatlistfind|stringlistfind|formlistfind|intlisthas|floatlisthas|stringlisthas|formlisthas|intlistsort|floatlistsort|stringlistsort|formlistsort|intlistslice|floatlistslice|stringlistslice|formlistslice|intlistresize|floatlistresize|stringlistresize|formlistresize|intlistcopy|floatlistcopy|stringlistcopy|formlistcopy|intlisttoarray|floatlisttoarray|stringlisttoarray|formlisttoarray|formlistfilterbytypes|formlistfilterbytype|countintvalueprefix|countfloatvalueprefix|countstringvalueprefix|countformvalueprefix|countintlistprefix|countfloatlistprefix|countstringlistprefix|countformlistprefix|countallprefix|countobjintvalueprefix|countobjfloatvalueprefix|countobjstringvalueprefix|countobjformvalueprefix|countobjintlistprefix|countobjfloatlistprefix|countobjstringlistprefix|countobjformlistprefix|countallobjprefix|clearintvalueprefix|clearfloatvalueprefix|clearstringvalueprefix|clearformvalueprefix|clearintlistprefix|clearfloatlistprefix|clearstringlistprefix|clearformlistprefix|clearallprefix|clearobjintvalueprefix|clearobjfloatvalueprefix|clearobjstringvalueprefix|clearobjformvalueprefix|clearobjintlistprefix|clearobjfloatlistprefix|clearobjstringlistprefix|clearobjformlistprefix|clearallobjprefix|debug_deletevalues|debug_deleteallvalues|debug_cleanup|debug_allintobjs|debug_allfloatobjs|debug_allstringobjs|debug_allformobjs|debug_allintlistobjs|debug_allfloatlistobjs|debug_allstringlistobjs|debug_allformlistobjs|debug_allobjintkeys|debug_allobjfloatkeys|debug_allobjstringkeys|debug_allobjformkeys|debug_allobjintlistkeys|debug_allobjfloatlistkeys|debug_allobjstringlistkeys|debug_allobjformlistkeys|debug_getintobjectcount|debug_getfloatobjectcount|debug_getstringobjectcount|debug_getformobjectcount|debug_getintlistobjectcount|debug_getfloatlistobjectcount|debug_getstringlistobjectcount|debug_getformlistobjectcount|debug_getintobject|debug_getfloatobject|debug_getstringobject|debug_getformobject|debug_getintlistobject|debug_getfloatlistobject|debug_getstringlistobject|debug_getformlistobject|debug_getintkeyscount|debug_getfloatkeyscount|debug_getstringkeyscount|debug_getformkeyscount|debug_getintlistkeyscount|debug_getfloatlistkeyscount|debug_getstringlistkeyscount|debug_getformlistkeyscount|debug_getintkey|debug_getfloatkey|debug_getstringkey|debug_getformkey|debug_getintlistkey|debug_getfloatlistkey|debug_getstringlistkey|debug_getformlistkey|filesetintvalue|filesetfloatvalue|filesetstringvalue|filesetformvalue|fileadjustintvalue|fileadjustfloatvalue|fileunsetintvalue|fileunsetfloatvalue|fileunsetstringvalue|fileunsetformvalue|filehasintvalue|filehasfloatvalue|filehasstringvalue|filehasformvalue|filegetintvalue|filegetfloatvalue|filegetstringvalue|filegetformvalue|fileintlistadd|filefloatlistadd|filestringlistadd|fileformlistadd|fileintlistadjust|filefloatlistadjust|fileintlistremove|filefloatlistremove|filestringlistremove|fileformlistremove|fileintlistget|filefloatlistget|filestringlistget|fileformlistget|fileintlistset|filefloatlistset|filestringlistset|fileformlistset|fileintlistclear|filefloatlistclear|filestringlistclear|fileformlistclear|fileintlistremoveat|filefloatlistremoveat|filestringlistremoveat|fileformlistremoveat|fileintlistinsert|filefloatlistinsert|filestringlistinsert|fileformlistinsert|fileintlistcount|filefloatlistcount|filestringlistcount|fileformlistcount|fileintlistfind|filefloatlistfind|filestringlistfind|fileformlistfind|fileintlisthas|filefloatlisthas|filestringlisthas|fileformlisthas|fileintlistslice|filefloatlistslice|filestringlistslice|fileformlistslice|fileintlistresize|filefloatlistresize|filestringlistresize|fileformlistresize|fileintlistcopy|filefloatlistcopy|filestringlistcopy|fileformlistcopy|debug_savefile|debug_filegetintkeyscount|debug_filegetfloatkeyscount|debug_filegetstringkeyscount|debug_filegetintlistkeyscount|debug_filegetfloatlistkeyscount|debug_filegetstringlistkeyscount|debug_filegetintkey|debug_filegetfloatkey|debug_filegetstringkey|debug_filegetintlistkey|debug_filegetfloatlistkey|debug_filegetstringlistkey|debug_filedeleteallvalues|debug_setdebugmode|importfile|exportfile|load|save|unload|ispendingsave|isgood|geterrors|jsoninfolder|jsonexists|setintvalue|setfloatvalue|setstringvalue|setformvalue|getintvalue|getfloatvalue|getstringvalue|getformvalue|unsetintvalue|unsetfloatvalue|unsetstringvalue|unsetformvalue|hasintvalue|hasfloatvalue|hasstringvalue|hasformvalue|intlistadd|floatlistadd|stringlistadd|formlistadd|intlistget|floatlistget|stringlistget|formlistget|intlistset|floatlistset|stringlistset|formlistset|intlistremove|floatlistremove|stringlistremove|formlistremove|intlistinsertat|floatlistinsertat|stringlistinsertat|formlistinsertat|intlistremoveat|floatlistremoveat|stringlistremoveat|formlistremoveat|intlistclear|floatlistclear|stringlistclear|formlistclear|intlistcount|floatlistcount|stringlistcount|formlistcount|intlistcountvalue|floatlistcountvalue|stringlistcountvalue|formlistcountvalue|intlistfind|floatlistfind|stringlistfind|formlistfind|intlisthas|floatlisthas|stringlisthas|formlisthas|intlistslice|floatlistslice|stringlistslice|formlistslice|intlistresize|floatlistresize|stringlistresize|formlistresize|intlistcopy|floatlistcopy|stringlistcopy|formlistcopy|intlisttoarray|floatlisttoarray|stringlisttoarray|formlisttoarray|adjustintvalue|adjustfloatvalue|intlistadjust|floatlistadjust|countintvalueprefix|countfloatvalueprefix|countstringvalueprefix|countformvalueprefix|countintlistprefix|countfloatlistprefix|countstringlistprefix|countformlistprefix|countallprefix|setpathintvalue|setpathfloatvalue|setpathstringvalue|setpathformvalue|setrawpathvalue|getpathintvalue|getpathfloatvalue|getpathstringvalue|getpathformvalue|getpathboolvalue|pathintelements|pathfloatelements|pathstringelements|pathformelements|findpathintelement|findpathfloatelement|findpathstringelement|findpathformelement|pathcount|pathmembers|canresolvepath|ispathstring|ispathnumber|ispathform|ispathbool|ispatharray|ispathobject|setpathintarray|setpathfloatarray|setpathstringarray|setpathformarray|clearpath|clearall|scancellobjects|scancellnpcs|scancellnpcsbyfaction|togglefreecamera|setfreecameraspeed|setfreecamerastate|filesinfolder|foldersinfolder|fileexists|readfromfile|writetofile|printconsole|getraceeditorid|getactorraceeditorid|setmenus|getnoderotation|getnoderotation|executebat|executebat|scancellactors|getversion|getscriptversion|actorarray|resizeactorarray|objrefarray|resizeobjrefarray|pushfloat|pushint|pushbool|pushstring|pushform|pushalias|pushactor|pushobjref|removefloat|removeint|removebool|removestring|removeform|removealias|removeactor|removeobjref|countfloat|countint|countbool|countstring|countform|countalias|countactor|countobjref|mergefloatarray|mergeintarray|mergeboolarray|mergestringarray|mergeformarray|mergealiasarray|mergeactorarray|mergeobjrefarray|slicefloatarray|sliceintarray|sliceboolarray|slicestringarray|sliceformarray|slicealiasarray|sliceactorarray|sliceobjrefarray|sortintarray|sortfloatarray|sortstringarray|clearempty|clearnone|countfalse|counttrue|countnone|stringsplit|stringjoin|addintvalues|addfloatvalues|clampint|clampfloat|wrapint|wrapfloat|signint|signfloat|resizeboolarray|pushbool|removebool|mergeboolarray|sliceboolarray|floatarray|intarray|boolarray|stringarray|formarray|aliasarray|resizefloatarray|resizeintarray|resizestringarray|resizeformarray|resizealiasarray){{identifier_break}}
+  reserved_classes_papyrus: (?i)\b(action|activator|activemagiceffect|actor|actorbase|alias|ammo|apparatus|armor|associationtype|book|cell|class|constructibleobject|container|debug|door|enchantment|encounterzone|effectshader|explosion|faction|flora|form|formlist|furniture|game|globalvariable|hazard|idle|imagespacemodifier|impactdataset|ingredient|key|keyword|leveledactor|leveleditem|leveledspell|light|location|locationalias|locationreftype|magiceffect|math|message|miscobject|musictype|objectreference|outfit|package|perk|potion|projectile|quest|race|referencealias|scene|scroll|shout|sound|soundcategory|soulgem|spell|static|talkingactivator|topic|topicinfo|utility|visualeffect|voicetype|weapon|weather|wordofpower|worldspace)\b
+  reserved_classes_papyrus_skse: (?i)\b(actorutil|storageutil|jsonutil|miscutil|papyrusutil)\b
+
+  non_reserved_identifier: (?:(?!{{reserved_functions_papyrus}}|{{reserved_functions_papyrus_skse}}){{identifier}})
+contexts:
+  main:
+    - include: comments
+    - include: constants
+    - include: types
+    - include: string
+    - include: operators
+    - include: papyrus
+  comments:
+    - match: ;/
+      push:
+        - meta_scope: comment
+        - match: /;
+          pop: true
+    - match: (;).*$\n?
+      scope: comment
+    - match: "{"
+      push:
+        - meta_scope: comment
+        - match: "}"
+          pop: true
+  constants:
+    - match: '\b(?i:(0x)([a-f0-9]{8}))'
+      scope: papyrus.constant.hex
+    - match: '\b(?i:(\d+\.\d*(e[\-\+]?\d+)?))(?=[^a-zA-Z_])'
+      scope: constant.numeric
+    - match: '\b([1-9]+[0-9]*|0)'
+      scope: constant.numeric
+    - match: (?i)\b(true|false|none)\b
+      scope: constant.language
+    - match: \[\]
+      scope: none
+  types:
+    - match: '(?i)\b(int|string|float|bool)\b'
+      scope: support.constant
+  string:
+    - match: '"'
+      scope: punctuation.definition.string.begin
+      push: inside-string
+  inside-string:
+    - meta_scope: string.quoted.double
+    - meta_include_prototype: false
+    - match: '"'
+      scope: punctuation.definition.string.end
+      pop: true
+    - include: string-escape
+    - match: $\n?
+      scope: invalid.illegal.unclosed-string
+      pop: true
+  string-escape:
+    - match: (?:\\(?:["\\/bfnrt]|u[0-9a-fA-F]{4}))
+      scope: constant.character.escape
+    - match: \\.
+      scope: invalid.illegal.unrecognized-string-escape
+  operators:
+    - match: '&&|\|\||\=\=|!\=|<\=|>\=|>|<|\+|\-|\*|/|!|%|\=|\+\=|-\=|\*\=|/\=|%\='
+      scope: keyword.operator
+  custom-functions:
+    - match: '(?={{non_reserved_identifier}}\s*\()'
+      set: call-method-name
+  call-method-name:
+    - match: '{{identifier}}'
+      scope: papyrus.custom.function
+      pop: true
+  papyrus:
+    # header
+    - match: (?i)^\s*(scriptname)\s+(\w+)(\s+(extends)\s+(\S+))?(\s+(conditional))?
+      scope: punctuation.section.sequence.begin
+      captures:
+        1: keyword.control
+        2: support.class
+        4: papyrus.keyword.special
+        5: entity.other.inherited-class
+        7: papyrus.keyword.special
+    # papyrus function formatting
+    - match: '(?i)\b(function)\s+([^\(]*)\('
+      captures:
+        1: keyword.control
+        2: entity.name.function
+      push:
+        - meta_scope: none
+        - match: \)
+          pop: true
+        - include: papyrus-params
+    - match: '(?i)\b(event)\s+([^\(]*)\('
+      captures:
+        1: keyword.control
+        2: entity.name.function
+      push:
+        - meta_scope: none
+        - match: \)
+          pop: true
+        - include: papyrus-params
+    - match: (?i)\b(state)\s+(.*)\n
+      captures:
+        1: keyword.control
+        2: papyrus.meta.state
+    - match: (?i)(^\s*\S+(\[\]))\s+(property)\s+(\S+)
+      captures:
+        1: support.type
+        2: papyrus.color.white
+        3: keyword.control
+        4: none
+      push:
+        - match: (?i)\b(auto|autoreadonly)?(\s+conditional)?\n
+          captures:
+            1: papyrus.keyword.special
+            2: papyrus.keyword.special
+          pop: true
+        - include: main
+    - match: (?i)(^\s*\S+)\s+(property)\s+(\S+)
+      captures:
+        1: support.type
+        2: keyword.control
+      push:
+        - match: (?i)\b(auto|autoreadonly)?(\s+conditional)?\n
+          captures:
+            1: papyrus.keyword.special
+            2: papyrus.keyword.special
+          pop: true
+        - include: main
+    # built-in papyrus functions
+    - match: '{{reserved_functions_papyrus}}'
+      scope: support.function
+    # built-in papyrus classes
+    - match: '{{reserved_classes_papyrus}}'
+      scope: support.class
+    # built-in papyrus keywords
+    - match: (?i)\b(import|global|hidden|native|scriptname)\b
+      scope: storage
+    - match: (?i)\b(if|elseif|else|endif|while|endwhile|return)\b
+      scope: keyword.control.flow
+    - match: (?i)\b(as|auto|autoreadonly|extends|parent|self|new)\b
+      scope: papyrus.keyword.special
+    - match: (?i)\b(function|endfunction|event|endevent|property|endproperty|state|endstate)\b
+      scope: keyword.control
+    - include: custom-functions
+    - include: skse
+  papyrus-close-function:
+    - match: 'EndFunction'
+      scope: keyword.control
+      pop: true
+  papyrus-params:
+    - include: constants
+    - include: string
+    - include: operators
+    - match: (?:\G\s*|,\s*)(?:{{reserved_classes_papyrus_skse}})\s+(\w+)\b(?:\s*(=))?
+      captures:
+        1: papyrus.skse.type
+        2: papyrus.parameter.function
+        3: keyword.operator
+    - match: (?:\G\s*|,\s*)(\w+)\s+(\w+)\b(?:\s*(=))?
+      captures:
+        1: support.type
+        2: papyrus.parameter.function
+        3: keyword.operator
+  skse:
+    - match: '{{reserved_functions_papyrus_skse}}'
+      scope: papyrus.skse.function
+    - match: '{{reserved_classes_papyrus_skse}}'
+      scope: papyrus.skse.type
